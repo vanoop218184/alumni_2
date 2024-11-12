@@ -41,7 +41,7 @@ const Sign = () => {
       formData.append("company", company);
 
       let result = await fetch(
-        "http://localhost:8001/alumni/register",
+        "https://alumni-2-rbi2.onrender.com/alumni/register",
         {
           method: "POST",
           body: formData,

@@ -10,7 +10,9 @@ const Alum = () => {
   useEffect(() => {
     const run = async () => {
       try {
-        let result = await fetch("https://nits-ian.onrender.com/alumni/alum");
+        let result = await fetch(
+          "https://alumni-2-rbi2.onrender.com/alumni/alum"
+        );
         result = await result.json();
         console.log(result);
         SetData(result);
@@ -20,8 +22,8 @@ const Alum = () => {
     };
     run();
   }, []);
-  
-  // console.log(`https://nits-ian.onrender.com/uploads/${props.img}`);
+
+  // console.log(`https://alumni-2-rbi2.onrender.com/uploads/${props.img}`);
   return (
     <div className="flex justify-center">
       <div className="w-10/12">

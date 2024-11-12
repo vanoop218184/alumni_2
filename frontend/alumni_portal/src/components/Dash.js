@@ -9,12 +9,15 @@ const Dash = () => {
   localdata = JSON.parse(localdata);
   useEffect(() => {
     const fun = async () => {
-      let data = await fetch("https://nits-ian.onrender.com/alumni/dashdata", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localdata.token}`,
-        },
-      });
+      let data = await fetch(
+        "https://alumni-2-rbi2.onrender.com/alumni/dashdata",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localdata.token}`,
+          },
+        }
+      );
       data = await data.json();
       setUser(data.user);
     };
@@ -22,7 +25,7 @@ const Dash = () => {
   }, []);
 
   if (user) {
-    let t = `https://nits-ian.onrender.com/uploads/${user.picture}`;
+    let t = `https://alumni-2-rbi2.onrender.com/uploads/${user.picture}`;
     if (t) {
       im = t;
     }

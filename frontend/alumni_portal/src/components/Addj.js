@@ -13,7 +13,7 @@ const Addj = () => {
   const branches = ["CSE", "ECE", "ME", "CE", "EE", "Other"];
   const user_id = JSON.parse(localStorage.getItem("user"))._id;
   const handleadd = async () => {
-    let result = await fetch("https://nits-ian.onrender.com/alumni/add", {
+    let result = await fetch("https://alumni-2-rbi2.onrender.com/alumni/add", {
       method: "post",
       body: JSON.stringify({
         user_id,

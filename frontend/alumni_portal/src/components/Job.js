@@ -12,7 +12,9 @@ const Job = () => {
   useEffect(() => {
     const fun = async () => {
       try {
-        let result = await fetch("https://nits-ian.onrender.com/alumni/jobs");
+        let result = await fetch(
+          "https://alumni-2-rbi2.onrender.com/alumni/jobs"
+        );
         if (result) {
           result = await result.json();
           setData(result);

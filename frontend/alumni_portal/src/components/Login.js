@@ -6,13 +6,16 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const handleLogin = async (event) => {
     event.preventDefault();
-    let result = await fetch("https://nits-ian.onrender.com/alumni/login", {
-      method: "post",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      "https://alumni-2-rbi2.onrender.com/alumni/login",
+      {
+        method: "post",
+        body: JSON.stringify({ email, password }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     if (result.status === "Passed") {
       localStorage.setItem("user", JSON.stringify(result));

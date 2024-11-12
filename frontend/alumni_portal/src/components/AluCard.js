@@ -1,7 +1,7 @@
 import React from "react";
 
 const AluCard = (props) => {
-  console.log(`https://nits-ian.onrender.com/uploads/${props.img}`);
+  console.log(`https://alumni-2-rbi2.onrender.com/uploads/${props.img}`);
   return (
     <div className="p-4 m-4 transform transition-transform duration-500 hover:scale-105">
       <div className="p-6 border border-gray-300 shadow-lg rounded-lg bg-white dark:bg-gray-900">

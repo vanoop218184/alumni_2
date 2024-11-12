@@ -20,12 +20,15 @@ const Updatep = () => {
   const location = useLocation();
   useEffect(() => {
     const fun = async () => {
-      let data = await fetch("https://nits-ian.onrender.com/alumni/dashdata", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localdata.token}`,
-        },
-      });
+      let data = await fetch(
+        "https://alumni-2-rbi2.onrender.com/alumni/dashdata",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localdata.token}`,
+          },
+        }
+      );
       data = await data.json();
       setUser(data.user);
       const val = data.user;
@@ -54,7 +57,7 @@ const Updatep = () => {
 
     try {
       let result = await fetch(
-        `https://nits-ian.onrender.com/alumni/user/${id}`,
+        `https://alumni-2-rbi2.onrender.com/alumni/user/${id}`,
         {
           method: "Put",
           body: formData,

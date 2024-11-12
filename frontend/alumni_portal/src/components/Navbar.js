@@ -16,7 +16,7 @@ function Navbar() {
     const fun = async () => {
       if (localdata) {
         let data = await fetch(
-          "https://nits-ian.onrender.com/alumni/dashdata",
+          "https://alumni-2-rbi2.onrender.com/alumni/dashdata",
           {
             method: "GET",
             headers: {
@@ -33,8 +33,8 @@ function Navbar() {
     fun();
   }, []);
   if (user) {
-    let t = `https://nits-ian.onrender.com/uploads/${user.picture}`;
-    // `https://nits-ian.onrender.com/uploads/${props.img}`
+    let t = `https://alumni-2-rbi2.onrender.com/uploads/${user.picture}`;
+    // `https://alumni-2-rbi2.onrender.com/uploads/${props.img}`
     console.log(t);
     if (t) {
       im = t;
