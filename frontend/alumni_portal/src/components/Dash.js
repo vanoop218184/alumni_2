@@ -25,7 +25,7 @@ const Dash = () => {
   }, []);
 
   if (user) {
-    let t = `https://alumni-2-rbi2.onrender.com/uploads/${user.picture}`;
+    let t = `${user.picture}`;
     if (t) {
       im = t;
     }
